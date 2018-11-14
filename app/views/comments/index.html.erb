@@ -1,0 +1,23 @@
+<h1>List of all related comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Comment</th>
+      <th>Author</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= link_to comment.content, message	%></td>
+        <td><%= comment.author	%></td>
+        <td><%= comment.created_at	%></td>
+        <td><%= comment.updated_at	%></td>
+        <td><%= link_to 'Delete', comment, method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

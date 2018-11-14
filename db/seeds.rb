@@ -1,13 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+user_1 = User.create(email: "test@example.com", password: "qazwsxedc")
 
-Message.create(content: 'Hej', author: 'Tom')
-Message.create(content: 'Gej', author: 'Dom')
-Message.create(content: 'Yay', author: 'Dana')
-Message.create(content: 'Welcome', author: 'Eustachy')
-Message.create(content: 'Bu', author: 'Janna')
+message_1 = Message.create(content: 'Message content 1', user: user_1)
+message_2 = Message.create(content: 'Message content 2', user: user_1)
+message_3 = Message.create(content: 'Message content 3', user: user_1)
+message_4 = Message.create(content: 'Message content 4', user: user_1)
+message_5 = Message.create(content: 'Message content 5', user: user_1)
+
+Comment.create(content: 'Cool comment 1', author: 'Jane One', message: message_1)
+Comment.create(content: 'Cool comment 2', author: 'Jane Two', message: message_2)
+Comment.create(content: 'Cool comment 3', author: 'Jane Three', message: message_3)
+Comment.create(content: 'Cool comment 4', author: 'Jane Four', message: message_4)
+Comment.create(content: 'Cool comment 5', author: 'Jane Five', message: message_5)
